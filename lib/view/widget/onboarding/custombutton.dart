@@ -1,8 +1,10 @@
+import 'package:ecommercecourse/controller/onboarding_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../core/constant/color.dart';
 
-class CustomButtonOnBoarding extends StatelessWidget {
+class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
   const CustomButtonOnBoarding({super.key});
 
   @override
@@ -11,7 +13,9 @@ class CustomButtonOnBoarding extends StatelessWidget {
       height: 40,
       margin: const EdgeInsets.only(bottom: 30),
       child: MaterialButton(
-        onPressed: () {},
+        onPressed: () {
+          controller.next();
+        },
         padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 0),
         textColor: Colors.white,
         color: AppColor.primaryColor,
